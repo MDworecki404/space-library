@@ -9,7 +9,40 @@
 
 .gargantua{
     width: 100vw;
+
     position: fixed;
     left: 0;
     top: 0;
+}
+.Main{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Main input{
+    position: relative;
+    top: 25%;
+    min-width: 300px;
+    width: 25vw;
+    height: 5vh;
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1.5vw;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: -1px;
+}
+.Main input::placeholder{
+    font-size: 1.5vw;
+    color: #dddddd;
+    transition: all 0.3s linear;
+}
+.Main input:focus::placeholder{
+    opacity: 0;
 }
