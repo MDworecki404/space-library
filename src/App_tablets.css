@@ -7,6 +7,9 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
+        background-image: url('./assets/gargantuaJPG.jpg');
+        background-position: center top;
+        background-size: cover;
 
     }
 
@@ -18,6 +21,7 @@
         left: 0;
         top: 0;
         z-index: -10;
+        display: none;
     }
 
     .Main {
