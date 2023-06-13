@@ -1,4 +1,6 @@
-import './App.css'
+import './App.css';
+import './App_mobile.css'
+import './App_tablets.css'
 import gargantua from './assets/gargantua.mp4'
 import gsap from 'gsap'
 import * as React from 'react'
@@ -52,11 +54,13 @@ function App(): JSX.Element {
                             setErr('')
                             setImage(image => [...image, imgHref]);
                             setDescription(description => [...description, descHref])
-                            gsap.to('.fetchedDataBox', {y: 30, duration: 1});
+
                         }
 
                     }
-
+                    gsap.to('.loading', {duration: 0.2, autoAlpha: 1,})
+                    gsap.to('.fetchedDataBox', {y: 30, duration: 1, delay: 2});
+                    gsap.to('.loading', {duration: 0.2, autoAlpha: 0, delay: 2.1});
                 })
                 .catch((err) => {
                     console.log(`Failed to fetch data: ${err}`);
@@ -72,6 +76,7 @@ function App(): JSX.Element {
     }
 
     return (<>
+            <div className={'loading'}></div>
             <div className={'errMessage'}>{err}</div>
             <div ref={boxRef} className={'fetchedDataBox'}>
                 <div className={'buttonDiv'}>

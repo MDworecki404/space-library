@@ -1,0 +1,208 @@
+@media screen and (max-width: 992px) {
+
+    #root {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+    }
+
+    .gargantua {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -10;
+    }
+
+    .Main {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Main input {
+        position: relative;
+        top: 25%;
+        min-width: 600px;
+        width: 25vw;
+        height: 5vh;
+        background: none;
+        outline: none;
+        border: none;
+        color: white;
+        font-size: 3vw;
+        transition: all 0.3s ease-in-out;
+        margin-bottom: -1px;
+        text-align: center;
+        caret-shape: underscore;
+    }
+
+    .button-51 {
+        visibility: hidden;
+        position: relative;
+        top: 30%;
+        background: none;
+        font-size: 3vw;
+        color: white;
+        cursor: pointer;
+        border: 1.5px solid white;
+        min-width: 150px;
+        min-height: 50px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .button-51:hover {
+        background-color: white;
+        color: black;
+        box-shadow: white 0 0 3px 3px;
+    }
+
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration {
+        display: none;
+    }
+
+    .Main input::placeholder {
+        font-size: 4vw;
+        color: #dddddd;
+        transition: all 0.3s linear;
+        text-align: center;
+    }
+
+    .Main input:focus::placeholder {
+        opacity: 0;
+    }
+
+    .fetchedDataBox {
+        width: 100vw;
+        height: 100%;
+        background-color: white;
+        position: fixed;
+        top: -3vw;
+        text-align: center;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: scroll;
+    }
+
+    .fetchedImage {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fetchedImage img {
+        max-width: 80%;
+    }
+
+    .fetchedDescription {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 2.5vw;
+
+    }
+
+    .fetchedDescription article {
+        width: 100%;
+        max-height: 300px;
+        text-wrap: avoid;
+        overflow-y: scroll;
+
+    }
+    .buttonDiv{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 15%;
+    }
+    .buttonDiv button {
+        min-width: 200px;
+        max-width: 15vw;
+        min-height: 50px;
+        font-size: 3.5vw;
+        background: none;
+        border: 1px solid black;
+        padding: 15px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        transform: translateY(5vh);
+
+    }
+    .buttonDiv button:hover {
+        background: black;
+        color: white;
+        box-shadow: 0 0 4px 4px black;
+    }
+    .Box{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .Box div{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    .Box div:first-child{
+        margin-top:  5%;
+    }
+    .errMessage{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 99;
+        color: white;
+        transform: translateY(55vh);
+    }
+    .loading{
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        bottom:  40vh;
+        z-index: 100;
+        transform: translateY(55vh);
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        border: 5px solid #ffffff;
+        border-top: 6px solid #999999;
+        animation: spin 1s infinite linear;
+        visibility: hidden;
+    }
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+}
